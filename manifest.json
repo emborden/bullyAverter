@@ -3,7 +3,7 @@
   "description": "filters your suggestions on people you follow basen on a niceness rating which searches tweets and bases an average on the frequency of exclusive behavior",
   "manifest_version": 2,
   "name": "bullyAverter",
-  "version": "1.0.1",
+  "version": "1.0.0.5",
   "homepage_url": "https://github.com/emborden/bullyAverter.git",
   "icons": {
     "48": "bullyAverter-48.png"
@@ -11,9 +11,8 @@
 
   "content_scripts": [
     {
-      "matches": ["https://twitter.com/*"],
-      "js": ["bullyAverter.js"],
-      "html": ["mainFile.html"]
+      "matches": ["<all_urls>"],
+      "js": ["bullyAverter.js"]
     }
   ],
 

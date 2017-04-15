@@ -1,12 +1,9 @@
-import System.IO;
-var filePath = "/defaultBlacklist.txt";
-
-
-
-if(window.location.href.indexOf("twitter.com")>=0)
-{
+//import System.IO;
+//var filePath = "/defaultBlacklist.txt";
 	//The current website is twitter
-	var elements = document.getElementsByTagName('my-tweet');
+	//var elements = document.querySelectorAll('div.tweet.js-stream-tweet.js-actionable-tweet.js-profile-popup-actionable.original-tweet.js-original-tweet.my-tweet');
+
+	/*var elements = document.getElementsByTagName('*');
 
 	for (var i = 0; i < elements.length; i++)
 	{
@@ -16,12 +13,35 @@ if(window.location.href.indexOf("twitter.com")>=0)
 		{
 			var node = element.childNodes[i];
 
-			if (node.nodeType === 3)
+			if (node.nodeName !== '#text')
 			{
-				var text = node.nodeValue;
-				var replacedText = text.replace('self-harm', '<a href="http://www.healthyplace.com/abuse/self-injury/alternatives-to-self-harm-self-injury/">self-harm</a>');
+			}
+			else
+			{
+				var text = node.textContent;
+				if (text.equals("self-harm"))
+				{
+					var newHtml = text.replace(/\bself-harm\b/g,'<a href="http://www.cnn.com">asdf</a>');
+				}
+
+				if (newHtml !== text)
+				{
+					var newThing = document.createElement('span');
+					newThing.innerHTML = newHtml;
+					node.parentNode.replaceChild(newThing,node);
+				}
 
 			}
 		}
-	}
+	}*/
+/*
+var parents = document.querySelectorAll(".my-tweet");
+for(int i = 0; i < parents.length; i++){
+	var tweetText = parents[i].querySelectorAll(".tweet-text");
+	tweetText.innerHTML = tweetText.innerHTML.replace(/\bself-harm\b/g,'<a href="http://www.nami.org/Learn-More/Mental-Health-Conditions/Related-Conditions/Self-harm">self-harm</a>');
 }
+*/
+
+document.body.innerHTML = document.body.innerHTML.replace(/\bself-harm\b/g,'<a href="http://www.nami.org/Learn-More/Mental-Health-Conditions/Related-Conditions/Self-harm">self-harm</a>');
+document.body.innerHTML = document.body.innerHTML.replace(/\bautism\b/g,'<a href="https://www.autismspeaks.org/what-autism">self-harm</a>');
+document.body.innerHTML = document.body.innerHTML.replace(/\bsuicide\b/g,'<a href="http://www.nami.org/Learn-More/Mental-Health-Conditions/Related-Conditions/Self-harm">self-harm</a>');
