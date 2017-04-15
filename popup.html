@@ -30,6 +30,17 @@ This page is shown when the extension button is clicked, because the
     <script src="popup.js"></script>
   </head>
   <body>
-    <p>Test.</p>
+    <h1>Options</h1>
+    <form>
+    Words to filter out delimited by commas:<br>
+    <input type="text" name="blacklist" multiple><br>
+    Words to whitelist delimited by commas:<br>
+    <input type="text" name="whitelist"><br>
+    <input type="submit" value="Submit">
+    </form>
+    <form>
+    Show with at least <input type="text" name="numstars"> stars<br>
+    <input type="submit" name="Submit">
+    </form>
   </body>
 </html>

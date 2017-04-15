@@ -9,11 +9,18 @@
     "48": "bullyAverter-48.png"
   },
 
-  "content_scripts": [
+  "content_scripts":
     {
-      "matches": ["<all_urls>"],
-      "js": ["bullyAverter.js"]
-    }
-  ]
+      "matches": ["https://twitter.com/*"],
+      "js": ["bullyAverter.js"],
+      "html": ["mainFile.html"]
+    },
+
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Options"
+  }
 
 }
