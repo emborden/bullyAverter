@@ -1,6 +1,6 @@
 {
 
-  "description": "filters and collects post that are intended to bully someone and reports and blocks them",
+  "description": "filters your suggestions on people you follow basen on a niceness rating which searches tweets and bases an average on the frequency of exclusive behavior",
   "manifest_version": 2,
   "name": "bullyAverter",
   "version": "1.0",
