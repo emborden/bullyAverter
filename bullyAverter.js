@@ -33,7 +33,7 @@ if(window.location.href.indexOf("facebook.com")>=0)
 // TO HERE MAKES TONS OF MERGE CONFLICTS also you need to test what website you are on this extension works on all urls the only way to filter through them is with the
 //conditional statement above 
 /*
-else if(window.location.href.indexOf("twitter.com")>=0)
+else if(window.location.href.indexOf("twitter.com")>=0){
 import System.IO;
 var filePath = "/defaultBlacklist.txt";
 	//The current website is twitter
@@ -75,6 +75,7 @@ var parents = document.querySelectorAll(".my-tweet");
 for(int i = 0; i < parents.length; i++){
 	var tweetText = parents[i].querySelectorAll(".tweet-text");
 	tweetText.innerHTML = tweetText.innerHTML.replace(/\bself-harm\b/g,'<a href="http://www.nami.org/Learn-More/Mental-Health-Conditions/Related-Conditions/Self-harm">self-harm</a>');
+}
 }
 */
 
